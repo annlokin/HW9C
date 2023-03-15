@@ -11,13 +11,11 @@ int InputUser(string message)
 
 void AllEvenNumberBetween(int M, int N)
 {
-    if (M == N)
+    if (M > N)
         return;
-    Console.Write($"{N}");
-    if (M % 2 != 0) return;
-    AllEvenNumberBetween(M + 1, N - 1);
-    return;
-    AllEvenNumberBetween(M + 2, N - 1);
+    if (M % 2 == 0)
+     System.Console.Write($"{M}\t");
+     AllEvenNumberBetween(M+1,N);
 }
 
 int numM = InputUser("Введите первое число: ");
